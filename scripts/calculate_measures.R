@@ -122,18 +122,9 @@ calculate_measures <- function(true_mats, est_mats, d, n, marg, case, mod, bad){
       percent = FALSE,
       unname = FALSE
     )
-
-    # bias_hand <-  mean( c(est_mats[[j]]) - c(true_mats), na.rm = TRUE )
-    #
+    
     biasabs_hand <- mean( abs(c(est_mats[[j]]) - c(true_mats)), na.rm = TRUE )
-    #
     biasrel_med_hand <- median( (c(est_mats[[j]]) - c(true_mats)) / c(true_mats), na.rm = TRUE )
-    #
-    # est_mean <- mean(c(est_mats[[j]]), na.rm = TRUE)
-    #
-    # est_sd <- sd(c(est_mats[[j]]), na.rm = TRUE)
-    #
-    # mcsd_mean <- mean(c(true_mats), na.rm = TRUE)
 
     c(  "n" = n,
         "d" = d,
